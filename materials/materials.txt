@@ -1,0 +1,3 @@
+pp outline shader based on: https://godotshaders.com/shader/screen-space-edge-detection-outline-shader/
+lake shader based on: https://godotshaders.com/shader/stylized-water-shader/
+river shader based on: https://godotshaders.com/shader/anime-esque-water-shader/

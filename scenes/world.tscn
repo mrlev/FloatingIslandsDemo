@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://bs3fydbutt2dd"]
+
+[ext_resource type="Material" uid="uid://cr54xutvwxa6r" path="res://materials/pp_outline.material" id="2_f0ym8"]
+[ext_resource type="Script" path="res://scripts/camera/camera_control.gd" id="2_pkaii"]
+[ext_resource type="Script" path="res://scripts/island/IslandGenerator.gd" id="5_a5liu"]
+
+[sub_resource type="Environment" id="Environment_52do7"]
+background_mode = 1
+background_color = Color(0.705882, 0.627451, 0.627451, 1)
+ambient_light_color = Color(0.705882, 0.627451, 0.627451, 1)
+reflected_light_source = 2
+tonemap_mode = 1
+ssao_enabled = true
+ssao_intensity = 4.0
+sdfgi_use_occlusion = true
+fog_light_color = Color(1, 0.8, 0.8, 1)
+volumetric_fog_albedo = Color(0.705882, 0.627451, 0.627451, 1)
+volumetric_fog_emission = Color(0.705882, 0.627451, 0.627451, 1)
+volumetric_fog_temporal_reprojection_enabled = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_mmexf"]
+material = ExtResource( "2_f0ym8" )
+size = Vector2(2, 2)
+
+[node name="World" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( "Environment_52do7" )
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.75471, -0.31405, 0.576009, 0, 0.877983, 0.478692, -0.656059, -0.361273, 0.662622, 0, 10, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.707107, -0.353554, 0.612373, 0, 0.866026, 0.5, -0.707107, -0.353554, 0.612373, 8, 4, 8)
+far = 128.0
+script = ExtResource( "2_pkaii" )
+max_speed = Vector3(5, 5, 5)
+
+[node name="DepthShaderMesh" type="MeshInstance3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 2.98023e-08, 0, -2.98023e-08, 1, 0, 0, 0)
+extra_cull_margin = 16384.0
+mesh = SubResource( "QuadMesh_mmexf" )
+
+[node name="IslandGenerator" type="Node3D" parent="."]
+script = ExtResource( "5_a5liu" )

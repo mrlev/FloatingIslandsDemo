@@ -1,0 +1,45 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://db8sswibtud8l"
+path="res://.godot/imported/river_hex_uv2_02.glb-1a0a3657c492f6368a2d24ce2dcc61f8.scn"
+
+[deps]
+
+source_file="res://gltf/river_hex_uv2_02.glb"
+dest_files=["res://.godot/imported/river_hex_uv2_02.glb-1a0a3657c492f6368a2d24ce2dcc61f8.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="Scene Root"
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.1
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+import_script/path=""
+_subresources={
+"meshes": {
+"river_hex_uv2_02_tile_mesh": {
+"generate/lightmap_uv": 2,
+"generate/lods": 2,
+"generate/shadow_meshes": 2,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://gltf/export/river_hex_uv2_02_land.res"
+},
+"river_hex_uv2_02_water_mesh001": {
+"generate/lightmap_uv": 2,
+"generate/lods": 2,
+"generate/shadow_meshes": 2,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://gltf/export/river_hex_uv2_02_water.res"
+}
+}
+}

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dphneewrkvasy"
+path="res://.godot/imported/stone_mid_001.obj-2d9c52a3feed0f75990c1848a81df12d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stone_mid_001.obj-2d9c52a3feed0f75990c1848a81df12d.mesh"]
+
+source_file="res://obj/stones/stone_mid_001.obj"
+dest_files=["res://.godot/imported/stone_mid_001.obj-2d9c52a3feed0f75990c1848a81df12d.mesh", "res://.godot/imported/stone_mid_001.obj-2d9c52a3feed0f75990c1848a81df12d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

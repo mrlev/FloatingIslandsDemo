@@ -1,0 +1,157 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+_global_script_classes=[{
+"base": "Node3D",
+"class": &"CameraControl",
+"language": &"GDScript",
+"path": "res://scripts/camera/camera_control.gd"
+}, {
+"base": "RefCounted",
+"class": &"CircleTool",
+"language": &"GDScript",
+"path": "res://scripts/shapes/CircleTool.gd"
+}, {
+"base": "RefCounted",
+"class": &"HexGrid",
+"language": &"GDScript",
+"path": "res://scripts/hex_grid/HexGrid.gd"
+}, {
+"base": "RefCounted",
+"class": &"HexTool",
+"language": &"GDScript",
+"path": "res://scripts/shapes/HexTool.gd"
+}, {
+"base": "RefCounted",
+"class": &"HexTypes",
+"language": &"GDScript",
+"path": "res://scripts/game/HexTypes.gd"
+}, {
+"base": "Node3D",
+"class": &"Island",
+"language": &"GDScript",
+"path": "res://scripts/island/Island.gd"
+}, {
+"base": "Node3D",
+"class": &"IslandGenerator",
+"language": &"GDScript",
+"path": "res://scripts/island/IslandGenerator.gd"
+}, {
+"base": "RefCounted",
+"class": &"IslandHeightDataTool",
+"language": &"GDScript",
+"path": "res://scripts/island/IslandHeightDataTool.gd"
+}, {
+"base": "RefCounted",
+"class": &"IslandMeshTool",
+"language": &"GDScript",
+"path": "res://scripts/island/IslandMeshTool.gd"
+}, {
+"base": "RefCounted",
+"class": &"IslandMultiMeshDataTool",
+"language": &"GDScript",
+"path": "res://scripts/island/IslandMultiMeshDataTool.gd"
+}, {
+"base": "RefCounted",
+"class": &"IslandMultiMeshInstanceTool",
+"language": &"GDScript",
+"path": "res://scripts/island/IslandMultiMeshInstanceTool.gd"
+}, {
+"base": "RefCounted",
+"class": &"IslandWaterDataTool",
+"language": &"GDScript",
+"path": "res://scripts/island/IslandWaterDataTool.gd"
+}, {
+"base": "Node",
+"class": &"LineTool",
+"language": &"GDScript",
+"path": "res://scripts/shapes/LineTool.gd"
+}, {
+"base": "RefCounted",
+"class": &"RiverTileTool",
+"language": &"GDScript",
+"path": "res://scripts/tiles/RiverTileTool.gd"
+}, {
+"base": "RefCounted",
+"class": &"TriangleTool",
+"language": &"GDScript",
+"path": "res://scripts/shapes/TriangleTool.gd"
+}]
+_global_script_class_icons={
+"CameraControl": "",
+"CircleTool": "",
+"HexGrid": "",
+"HexTool": "",
+"HexTypes": "",
+"Island": "",
+"IslandGenerator": "",
+"IslandHeightDataTool": "",
+"IslandMeshTool": "",
+"IslandMultiMeshDataTool": "",
+"IslandMultiMeshInstanceTool": "",
+"IslandWaterDataTool": "",
+"LineTool": "",
+"RiverTileTool": "",
+"TriangleTool": ""
+}
+
+[application]
+
+config/name="FloatingIslands"
+run/main_scene="res://scenes/world.tscn"
+boot_splash/show_image=false
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+config/features=PackedStringArray("4.0", "Vulkan Clustered")
+
+[autoload]
+
+line_tool="*res://scripts/shapes/LineTool.gd"
+
+[debug]
+
+gdscript/warnings/integer_division=false
+gdscript/warnings/assert_always_false=false
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
+[input]
+
+ui_accept={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"store_command":true,"alt_pressed":false,"shift_pressed":false,"meta_pressed":false,"command_pressed":false,"pressed":false,"keycode":16777221,"physical_keycode":0,"unicode":16777221,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"store_command":true,"alt_pressed":false,"shift_pressed":false,"meta_pressed":false,"command_pressed":false,"pressed":false,"keycode":16777222,"physical_keycode":0,"unicode":16777222,"echo":false,"script":null)
+]
+}
+ui_select={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"store_command":true,"alt_pressed":false,"shift_pressed":false,"meta_pressed":false,"command_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"unicode":32,"echo":false,"script":null)
+]
+}
+ui_lmb={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"store_command":true,"alt_pressed":false,"shift_pressed":false,"meta_pressed":false,"command_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"pressed":false,"double_click":false,"script":null)
+]
+}
+ui_q={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"store_command":true,"alt_pressed":false,"shift_pressed":false,"meta_pressed":false,"command_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"unicode":0,"echo":false,"script":null)
+]
+}
+
+[rendering]
+
+shadows/directional_shadow/size=8192
+shadows/directional_shadow/soft_shadow_quality=5
+environment/ssao/quality=3
+anti_aliasing/quality/screen_space_aa=1
